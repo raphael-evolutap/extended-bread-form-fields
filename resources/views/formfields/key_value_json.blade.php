@@ -11,10 +11,10 @@
     @foreach($old_parameters as $parameter)
         <div class="form-group row" row-id="{{$loop->index}}">
             <div class="col-xs-3" style="margin-bottom:0;">
-                <input type="text" class="form-control" name="{{ $row->field }}[{{$loop->index}}][key]" value="{{ $parameter->key }}" id="key"/>
+                <input type="text" class="form-control" name="{{ $row->field }}[{{$loop->index}}][key]" value="{{ $parameter->key }}" placeholder="{{ isset($row->details->key_placeholder) ? $row->details->key_placeholder : ''}}" id="key"/>
             </div>
             <div class="col-xs-3" style="margin-bottom:0;">
-                <input type="text" class="form-control" name="{{ $row->field }}[{{$loop->index}}][value]" value="{{ $parameter->value }}" id="value"/>
+                <input type="text" class="form-control" name="{{ $row->field }}[{{$loop->index}}][value]" value="{{ $parameter->value }}" placeholder="{{ isset($row->details->value_placeholder) ? $row->details->value_placeholder : ''}}" id="value"/>
             </div>
             
             <div class="col-xs-1" style="margin-bottom:0;">
@@ -28,10 +28,10 @@
 @endif
     <div class="form-group row" row-id="{{ $end_id }}">
         <div class="col-xs-3" style="margin-bottom:0;">
-            <input type="text" class="form-control" name="{{ $row->field }}[{{ $end_id }}][key]" value="" id="key"/>
+            <input type="text" class="form-control" name="{{ $row->field }}[{{ $end_id }}][key]" value="" placeholder="{{ isset($row->details->key_placeholder) ? $row->details->key_placeholder : ''}}" id="key"/>
         </div>
         <div class="col-xs-3" style="margin-bottom:0;">
-            <input type="text" class="form-control" name="{{ $row->field }}[{{ $end_id }}][value]" value="" id="value"/>
+            <input type="text" class="form-control" name="{{ $row->field }}[{{ $end_id }}][value]" value="" placeholder="{{ isset($row->details->value_placeholder) ? $row->details->value_placeholder : ''}}" id="value"/>
         </div>
         <div class="col-xs-1" style="margin-bottom:0;">
             <button type="button" class="btn btn-success btn-xs" style="margin-top:0px;"><i class="voyager-plus"></i></button>
