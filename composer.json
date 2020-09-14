@@ -1,5 +1,5 @@
 {
-    "name": "evolutap-extended-bread-form-fields",
+    "name": "evolutap-form-fields",
     "description": "Extended FormFields hook interface to Voyager BREAD",
     "tags": [
         "voyager",
