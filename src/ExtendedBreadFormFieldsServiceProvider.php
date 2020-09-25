@@ -2,6 +2,7 @@
 
 namespace ExtendedBreadFormFields;
 
+use TCG\Voyager\Voyager as VoyagerVoyager;
 use TCG\Voyager\Facades\Voyager;
 use Illuminate\Support\ServiceProvider;
 use ExtendedBreadFormFields\FormFields\MultipleImagesWithAttrsFormField;
@@ -26,8 +27,8 @@ class ExtendedBreadFormFieldsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Voyager::addFormField(KeyValueJsonFormField::class);
-        Voyager::addFormField(MultipleImagesWithAttrsFormField::class);
+        (new VoyagerVoyager)->addFormField(KeyValueJsonFormField::class);
+        (new VoyagerVoyager)->addFormField(MultipleImagesWithAttrsFormField::class);
 
         $this->app->bind(
             'TCG\Voyager\Http\Controllers\VoyagerBaseController',
